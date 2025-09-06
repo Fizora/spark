@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const interFont = Inter({
+const Font = Inter({
   variable: "--inter-font",
   subsets: ["latin"],
 });
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${interFont.className} antialiased`}>{children}</body>
+      <body className={`${Font.className} antialiased`}>{children}</body>
     </html>
   );
 }

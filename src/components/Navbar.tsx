@@ -1,23 +1,36 @@
 "use client";
 import { LucideMenu, LucideX } from "lucide-react";
+import { nav } from "motion/react-client";
 import Link from "next/link";
 import { useState } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const navItems = [
+    { name: "Discover", href: "#discover" },
+    { name: "Category", href: "#category" },
+    { name: "Policy", href: "#policy" },
+    { name: "Contact", href: "contact" },
+  ];
   return (
     <>
-      <header className="bg-white/70 backdrop-blur-lg w-full py-2 fixed top-0 left-0 ">
+      <header
+        className="bg-white/70 backdrop-blur-lg w-full py-2 fixed top-0 left-0"
+        data-aos="fade-down"
+      >
         <div className="mx-auto max-w-7xl flex items-center justify-between px-4 md:px-0">
-          <div className="">
-            <a href="">Spark.</a>
+          <div className="young text-xl">
+            <a href="">
+              S<span className="text-white bg-black">park.</span>
+            </a>
           </div>
 
           <nav className="hidden md:flex items-center gap-4 ">
-            <Link href={""}>Home</Link>
-            <Link href={""}>Articles</Link>
-            <Link href={""}>Privacy</Link>
-            <Link href={""}>Letters</Link>
+            {navItems.map((item) => (
+              <>
+                <a href={item.href}>{item.name}</a>
+              </>
+            ))}
           </nav>
 
           <button
@@ -38,10 +51,11 @@ export default function Navbar() {
                 </button>
               </div>
               <nav className="flex flex-col gap-6">
-                <Link href={""}>Home</Link>
-                <Link href={""}>Articles</Link>
-                <Link href={""}>Privacy</Link>
-                <Link href={""}>Letters</Link>
+                {navItems.map((item) => (
+                  <>
+                    <a href={item.href}>{item.name}</a>
+                  </>
+                ))}
               </nav>
             </div>
           )}
