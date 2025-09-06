@@ -1,7 +1,5 @@
 "use client";
 import { LucideMenu, LucideX } from "lucide-react";
-import { nav } from "motion/react-client";
-import Link from "next/link";
 import { useState } from "react";
 
 export default function Navbar() {
