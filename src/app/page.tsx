@@ -30,7 +30,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-10 py-20">
           <div className="space-y-6 max-w-2xl" data-aos="fade-right">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold young">
               Find Your Future House.
             </h1>
             <p className="text-base md:text-lg max-w-2xl">
@@ -74,7 +74,7 @@ export default function Home() {
             data-aos="zoom-in-up"
           >
             <div className="text-center space-y-4">
-              <h1 className="text-3xl md:text-5xl font-bold">
+              <h1 className="text-3xl md:text-5xl font-bold young">
                 Choose Your Dream House
               </h1>
               <p className="text-3xl md:text-4xl">⭐⭐⭐⭐⭐</p>
